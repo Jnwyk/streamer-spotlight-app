@@ -1,5 +1,14 @@
+import StremerForm from "../components/StreamerForm/StreamerForm";
+
 const Home = () => {
-  return;
+  const submitForm = (form) => {
+    console.log(form);
+  };
+  return (
+    <>
+      <StremerForm submitForm={(streamerForm) => submitForm(streamerForm)} />
+    </>
+  );
 };
 
 export default Home;
