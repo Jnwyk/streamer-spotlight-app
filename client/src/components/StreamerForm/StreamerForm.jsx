@@ -7,7 +7,7 @@ import { useState } from "react";
 const StremerForm = ({ submitForm }) => {
   const [streamerForm, setStreamerForm] = useState({
     name: "",
-    platform: "",
+    streamingPlatform: "",
     description: "",
   });
 
@@ -16,7 +16,7 @@ const StremerForm = ({ submitForm }) => {
     submitForm(streamerForm);
     setStreamerForm({
       name: "",
-      platform: "",
+      streamingPlatform: "",
       description: "",
     });
   };
@@ -33,7 +33,7 @@ const StremerForm = ({ submitForm }) => {
       />
       <DropdownInput
         label="Platform"
-        onChange={(input) => handleOnChange("platform", input)}
+        onChange={(input) => handleOnChange("streamingPlatform", input)}
       />
       <TextareaInput
         label="Description"
