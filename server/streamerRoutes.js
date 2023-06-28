@@ -18,7 +18,9 @@ const getAll = async (req, res) => {
 };
 
 const getOne = async (req, res) => {
-  const streamer = await Streamer.findByPk(req.params.streamerId);
+  const streamer = await Streamer.findByPk(req.params.streamerId, {
+    include: { model: Vote },
+  });
   res.status(200).json({ streamer: streamer });
 };
 

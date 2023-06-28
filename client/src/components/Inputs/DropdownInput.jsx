@@ -1,7 +1,7 @@
 import "./styles.css";
 
 const DropdownInput = ({ label, placeholder, id, onChange }) => {
-  const platforms = ["twitch", "youtube", "tiktok", "kick", "rumble"];
+  const platforms = ["Twitch", "YouTube", "TikTok", "Kick", "Rumble"];
 
   return (
     <label className="dropdown-input">

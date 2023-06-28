@@ -1,5 +1,6 @@
 import "./styles.css";
 import Button from "../Button/Button";
+import Card from "../Card/Card";
 import TextInput from "../Inputs/TextInput";
 import TextareaInput from "../Inputs/TextareaInput";
 import DropdownInput from "../Inputs/DropdownInput";
@@ -37,7 +38,7 @@ const StremerForm = ({ submitForm }) => {
   };
 
   return (
-    <form className="streamer-form">
+    <Card className="streamer-form">
       <TextInput
         label="Streamer name"
         onChange={(input) => handleOnChange("name", input)}
@@ -59,7 +60,7 @@ const StremerForm = ({ submitForm }) => {
       >
         Submit
       </Button>
-    </form>
+    </Card>
   );
 };
 

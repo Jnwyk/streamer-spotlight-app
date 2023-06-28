@@ -6,13 +6,12 @@ const Streamer = db.sequelize.define(
   "Streamer",
   {
     name: DataTypes.STRING,
-    image: DataTypes.STRING,
     streamingPlatform: DataTypes.ENUM([
-      "twitch",
-      "youtube",
-      "tiktok",
-      "kick",
-      "rumble",
+      "Twitch",
+      "YouTube",
+      "TikTok",
+      "Kick",
+      "Rumble",
     ]),
     description: DataTypes.STRING,
   },

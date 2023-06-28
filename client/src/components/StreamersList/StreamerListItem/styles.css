@@ -1,0 +1,41 @@
+.streamer-list__vote-container{
+  display: flex;
+  flex-direction: row;
+  gap: 16px
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+.streamer-list-item__vote-number{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  width: 48px;
+  height: 48px;
+  color: white;
+  font-size: 20px;
+  font-weight: 900;
+  box-shadow: 0 0 10px 2px #2d2d2d32;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.streamer-list-item__vote-number_likes{
+  background-color: #00FF00;
+}
+
+.streamer-list-item__vote-number_likes:hover{
+  background-color: #00e000;
+}
+
+.streamer-list-item__vote-number_dislikes{
+  background-color: #F40009;
+}
+
+.streamer-list-item__vote-number_dislikes:hover{
+  background-color: #e90008;
+}
