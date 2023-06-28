@@ -1,0 +1,12 @@
+/* MAIN PAGE */
+
+.home-page{
+  display: flex;
+  gap: 96px;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* STREAMER PAGE */

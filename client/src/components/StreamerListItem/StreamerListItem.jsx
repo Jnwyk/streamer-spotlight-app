@@ -1,3 +1,5 @@
+// import "./styles.css";
+
 const StreamersListItem = ({ streamer }) => {
   return (
     <div className="streamer-list-item">

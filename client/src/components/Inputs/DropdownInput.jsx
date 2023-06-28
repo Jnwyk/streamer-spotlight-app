@@ -1,3 +1,5 @@
+import "./styles.css";
+
 const DropdownInput = ({ label, placeholder, id, onChange }) => {
   const platforms = ["twitch", "youtube", "tiktok", "kick", "rumble"];
 

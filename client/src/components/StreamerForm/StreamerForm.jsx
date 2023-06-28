@@ -1,7 +1,8 @@
+import "./styles.css";
 import Button from "../Button/Button";
-import TextInput from "../TextInput/TextInput";
-import TextareaInput from "../TextareaInput/TextareaInput";
-import DropdownInput from "../DropdownInput/DropdownInput";
+import TextInput from "../Inputs/TextInput";
+import TextareaInput from "../Inputs/TextareaInput";
+import DropdownInput from "../Inputs/DropdownInput";
 import { useState } from "react";
 
 const StremerForm = ({ submitForm }) => {
@@ -25,11 +26,22 @@ const StremerForm = ({ submitForm }) => {
     setStreamerForm({ ...streamerForm, [key]: value });
   };
 
+  const isFormEmpty = () => {
+    if (
+      streamerForm.name === "" ||
+      streamerForm.streamingPlatform === "" ||
+      streamerForm.description === ""
+    )
+      return true;
+    return false;
+  };
+
   return (
-    <form>
+    <form className="streamer-form">
       <TextInput
         label="Streamer name"
         onChange={(input) => handleOnChange("name", input)}
+        value={streamerForm.name}
       />
       <DropdownInput
         label="Platform"
@@ -38,8 +50,13 @@ const StremerForm = ({ submitForm }) => {
       <TextareaInput
         label="Description"
         onChange={(input) => handleOnChange("description", input)}
+        value={streamerForm.description}
       />
-      <Button type="submit" onClick={(e) => handleSubmitForm(e)}>
+      <Button
+        type="submit"
+        disabled={isFormEmpty() ? true : false}
+        onClick={(e) => handleSubmitForm(e)}
+      >
         Submit
       </Button>
     </form>
