@@ -7,6 +7,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  cursor: default;
 }
 
 .streamer-card__name{
@@ -21,6 +22,7 @@
 
 .streamer-card__description{
   text-align: left;
+  margin-top: 24px;
 }
 
 .streamer-card__image{
@@ -49,4 +51,21 @@
 
 .streamer-card__like-counter_negative{
   background-color: #F40009;
+}
+
+.streamer-card__link{
+  position: absolute;
+  top: 1%;
+  left: 1%;
+  background-image: url(https://icons.veryicon.com/png/o/miscellaneous/eva-fill/arrow-back-11.png);
+  background-size: 35px 35px;
+  height: 35px;
+  width: 35px;
+  transition: 1s;
+}
+
+.streamer-card__link:hover{
+  background-size: 37px 37px;
+  height: 37px;
+  width: 37px;
 }

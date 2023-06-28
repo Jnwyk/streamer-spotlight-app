@@ -6,6 +6,7 @@ const StreamerCard = ({ streamer }) => {
 
   return (
     <Card className="streamer-card">
+      <a href="/streamers" className="streamer-card__link" />
       <h2 className="streamer-card__name">{streamer.name}</h2>
       <h4 className="streamer-card__platform">{streamer.streamingPlatform}</h4>
       <img
