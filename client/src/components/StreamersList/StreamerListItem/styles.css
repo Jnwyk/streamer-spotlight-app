@@ -4,9 +4,10 @@
   gap: 16px
 }
 
-a {
+.streamer-list-item__name{
   color: black;
   text-decoration: none;
+  font-size: 24px;
 }
 
 .streamer-list-item__vote-number{

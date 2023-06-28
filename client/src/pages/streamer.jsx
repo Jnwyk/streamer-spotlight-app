@@ -14,7 +14,7 @@ const Streamer = () => {
         .then((res) => setStreamer(res.data.streamer));
     };
     fetchData();
-  }, []);
+  }, [streamerId]);
 
   return streamer ? <StreamerCard streamer={streamer} /> : "";
 };

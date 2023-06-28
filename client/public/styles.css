@@ -1,4 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Homenaje&display=swap');
+
 body{
   box-sizing: border-box;
   background-color: #FFFAF1;
+  font-family: 'Homenaje', sans-serif;
 }

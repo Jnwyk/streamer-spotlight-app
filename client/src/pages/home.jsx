@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import "./styles.css";
 import StremerForm from "../components/StreamerForm/StreamerForm";
 import StreamersList from "../components/StreamersList/StreamersList";
 

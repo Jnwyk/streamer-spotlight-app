@@ -9,8 +9,44 @@
   transform: translate(-50%, -50%);
 }
 
+.streamer-card__name{
+  margin: 0;
+  font-size: 32px;
+}
+
+.streamer-card__platform{
+  margin: 12px;
+  font-size: 20px;
+}
+
+.streamer-card__description{
+  text-align: left;
+}
+
 .streamer-card__image{
   object-fit: cover;
   height: 200px;
   width: 200px;
+  box-shadow: 0 0 10px 2px #2d2d2d32;
+  border-radius: 8px;
+}
+
+.streamer-card__like-counter{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 80px;
+  box-shadow: 0 0 10px 2px #2d2d2d32;
+  font-size: 24px;
+  font-weight: 700;
+  color: white;
+}
+
+.streamer-card__like-counter_positive{
+  background-color: #00FF00;
+}
+
+.streamer-card__like-counter_negative{
+  background-color: #F40009;
 }

@@ -7,6 +7,7 @@ const StreamerCard = ({ streamer }) => {
   return (
     <Card className="streamer-card">
       <h2 className="streamer-card__name">{streamer.name}</h2>
+      <h4 className="streamer-card__platform">{streamer.streamingPlatform}</h4>
       <img
         className="streamer-card__image"
         src="https://dziendobry.tvn.pl/najnowsze/cdn-zdjecie-fs6iq6-fretka-5447944/alternates/SQUARE_1280"
