@@ -10,7 +10,7 @@ const create = async (req, res) => {
     );
     return res.status(201).json({ streamer: streamer });
   } catch (error) {
-    res.status(500).json({ error: error });
+    return res.status(500).json({ error: error });
   }
 };
 
@@ -18,7 +18,7 @@ const getAll = async (req, res) => {
   const streamers = await Streamer.findAll({
     include: { model: Vote },
   });
-  res.status(200).json({ streamers: streamers });
+  return res.status(200).json({ streamers: streamers });
 };
 
 const getOne = async (req, res) => {
@@ -26,14 +26,12 @@ const getOne = async (req, res) => {
     const streamer = await Streamer.findByPk(req.params.streamerId, {
       include: { model: Vote },
     });
-
-    if (!streamer) {
-      console.log("========================== TEST ==========================");
-      res.status(404).json({ error: "User not found" });
+    if (streamer === null) {
+      return res.status(404).json({ error: "User not found" });
     }
-    res.status(200).json({ streamer: streamer });
+    return res.status(200).json({ streamer: streamer });
   } catch (error) {
-    res.status(500).json({ error: error });
+    return res.status(500).json({ error: error });
   }
 };
 
@@ -42,10 +40,10 @@ const update = async (req, res) => {
     const vote = await Vote.update(req.body, {
       where: { StreamerId: req.params.streamerId },
     });
-    if (!vote) res.status(404).json({ error: "User not found" });
-    res.status(200).json({ vote: vote });
+    if (!vote) return res.status(404).json({ error: "User not found" });
+    return res.status(200).json({ vote: vote });
   } catch (error) {
-    res.status(500).json({ error: error });
+    return res.status(500).json({ error: error });
   }
 };
 
