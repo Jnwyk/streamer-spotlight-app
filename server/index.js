@@ -13,5 +13,6 @@ app.use(express.json());
 db.sequelize.sync().then(() => console.log("Connected with db"));
 
 app.use("/streamers", streamerRoutes);
+app.use("*", () => console.log("Page does not exist"));
 
 app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));

@@ -1,0 +1,20 @@
+{
+  "name": "streamer-spotlight-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:client": "cd ./client && npm run start",
+    "start:server": "cd ./server && npm run start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jnwyk/streamer-spotlight-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jnwyk/streamer-spotlight-app/issues"
+  },
+  "homepage": "https://github.com/Jnwyk/streamer-spotlight-app#readme"
+}

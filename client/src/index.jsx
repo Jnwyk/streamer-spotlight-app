@@ -12,6 +12,7 @@ root.render(
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/:streamerId" element={<Streamer />} />
+        <Route path="*" element={<div>Page not found</div>} />
       </Routes>
     </HashRouter>
   </React.StrictMode>

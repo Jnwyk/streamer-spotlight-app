@@ -11,7 +11,8 @@ const Streamer = () => {
     const fetchData = async () => {
       await axios
         .get(`http://localhost:3080/streamers/${streamerId}`)
-        .then((res) => setStreamer(res.data.streamer));
+        .then((res) => setStreamer(res.data.streamer))
+        .catch((error) => console.error(error));
     };
     fetchData();
   }, [streamerId]);
